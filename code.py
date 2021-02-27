@@ -30,7 +30,7 @@ def folder_action(folder_loc): #function to deal with folders
                     except: #exception handling when user entered the wrong password
                         print("=> PLEASE ENTER THE CORRECT PASSWORD")
 
-if os.path.isfile(input_file) and present_file != script_loc: #dealing directly with a file
+if os.path.isfile(input_file) and input_file != script_loc: #dealing directly with a file
     if input_operation == "e":
         pyAesCrypt.encryptFile(input_file, input_file + ".aes", input_password, buffsize)
         os.remove(input_file)
